@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <th class="box"> Amount </th>
+            <th class="box"> From Currency </th>
+            <th class="box"> To Currency </th>
+        </tr>
+        <tr>
+            <td class="box"><input type="text" id="amount"></td>
+            <td class="box">
+                <select  class="slt" id="from">
+                    <option class="opt" value="VND"> Việt Nam </option>
+                    <option class="opt" value="USD"> USA </option>
+                </select>
+            </td>
+            <td class="box">
+                <select id="to" class="slt">
+                    <option class="opt" value="USD"> USA </option>
+                    <option class="opt"value="VND"> Việt Nam </option>
+                </select>
+            </td>
+            <td class="box"><button  id="btn"  onclick="convertCurrency()" >Convert</button></td>
+        </tr>
+        <tr>
+            <td class="box" colspan="4" id="rs"><strong class="rs">Result: </strong><label class="rs" id="result"></label></td>
+        </tr>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>

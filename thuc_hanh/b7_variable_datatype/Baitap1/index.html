@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính toán</title>
+    <style>
+        button {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: darkturquoise;
+            color: black;
+        }
+        input {
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ol type="1" >
+        <li class="bt">
+            <h3>Tính điểm trung bình:</h3>
+            Điểm Vật lí <br><input type="text"  id="physics"  placeholder=" Nhập điểm"><br>
+            Điểm Hóa học <br><input type="text"  id="chemistry" placeholder=" Nhập điểm"><br>
+            Điểm Sinh học <br><input type="text"  id="biology" placeholder=" Nhập điểm"><br><br>
+            <button onclick="diemTB()" > Điểm trung bình </button> = <strong id="diemTB" ></strong>
+        </li>
+        <li class="bt">
+            <h3>Đổi nhiệt độ C sang F:</h3>
+            <input type="text" id="doC" placeholder=" Nhập vào độ C">
+            <button onclick="convertTemp()">Chuyển sang độ F</button> =
+            <strong id="doF"></strong>
+        </li>
+        <li class="bt">
+            <h3>Tính diện tích và chu vi hình tròn:</h3>
+            <input type="text" id="banKinh" placeholder=" Nhập vào bán kính"><br><br>
+            <button id="dienTich" onclick="tinhDienTich()">Diện tích</button> = <strong id="result1"></strong><br><br>
+            <button id="chuVi" onclick="tinhChuVi()">Chu vi</button> = <strong id="result2"></strong>
+        </li>
+    </ol>
+    <script src="main.js"></script>
+</body>
+</html>
