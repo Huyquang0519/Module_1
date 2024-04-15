@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Calculator</h3>
+    <table>
+      <tr>
+        <td colspan="2">
+          <input type="number" id="num1" class="inp" placeholder="Nhập số thứ 1">
+        </td>
+        <td colspan="2">
+          <input type="number" id="num2" class="inp" placeholder="Nhập số thứ 2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="Add()">Addition(+)</button>
+        </td>
+        <td>
+          <button onclick="Sub()">Subtraction(-)</button>
+        </td>
+        <td>
+          <button onclick="Multiple()">Multiplication(X)</button>
+        </td>
+        <td>
+          <button onclick="Divide()">Division(/)</button>
+        </td>
+      </tr>
+    </table>
+    <strong>Result <label id="result"></label></strong>
+    <script src="main.js"></script>
+</body>
+</html>
