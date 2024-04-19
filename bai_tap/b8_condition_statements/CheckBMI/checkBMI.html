@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra BMI</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">KIỂM TRA CHỈ SỐ BMI</th>
+        </tr>
+        <tr>
+            <td>Chiều cao </td>
+            <td>
+                <label for="height"><input type="text" id="height" placeholder="0 m"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Cân nặng </td>
+            <td>
+                <label for="weight"><input type="text" id="weight" placeholder="0 kg"></label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="checkBMI()">Kiểm tra</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong id="result"></strong>
+            </td>
+        </tr>
+    </table>
+    <script src="checkBMI.js"></script>
+</body>
+</html>

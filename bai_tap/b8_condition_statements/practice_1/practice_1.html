@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 1</title>
+    <style>
+
+        input {
+            width: 200px;
+            height: 20px;
+            border-radius: 5px;
+        }
+        button {
+            border-radius: 5px;
+            height: 25px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<ol type="1">
+    <li>
+        <h4>Kiểm tra A có chia hết cho B?</h4>
+        A = <input type="number" id="numA" placeholder="Nhập số A">
+        <br><br>
+        B = <input type="number" id="numB" placeholder="Nhập số B">
+        <br><br>
+        <button onclick="solve1()"> Kiểm tra</button>
+        <br>
+        <strong id="ans1"></strong>
+    </li>
+    <li>
+        <h4>Bạn đã đủ tuổi vào lớp 10?</h4>
+        <input type="number" id="age" placeholder="Nhập tuổi của bạn">
+        <button onclick="solve2()">Kiểm tra</button>
+        <br>
+        <strong id="ans2"></strong>
+    </li>
+    <li>
+        <h4>Số nguyên sau là số âm hay dương?</h4>
+        <input type="number" id="num" placeholder="Nhập số nguyên vào đây">
+        <button onclick="solve3()">Kiểm tra</button>
+        <strong id="ans3"></strong>
+    </li>
+    <li>
+        <h4>Tìm số lớn nhất trong ba số?</h4>
+        A = <input type="text" id="num1" placeholder="Nhập số A">
+        <br><br>
+        B = <input type="text" id="num2" placeholder="Nhập số B">
+        <br><br>
+        C = <input type="text" id="num3" placeholder="Nhập số C">
+        <br><br>
+        <button onclick="solve4()">Kiểm tra</button>
+        <br>
+        <strong id="ans4"></strong>
+    </li>
+    <li>
+        <h4>Xếp loại học lực</h4>
+        <table>
+            <tr>
+                <th colspan="2">Academic Transcript</th>
+            </tr>
+            <tr>
+                <td>Test</td>
+                <td><input type="text" id="test" placeholder="Nhập điểm vào đây"></td>
+            </tr>
+            <tr>
+                <td>Mid-term Test</td>
+                <td><input type="text" id="mtest" placeholder="Nhập điểm vào đây"></td>
+            </tr>
+            <tr>
+                <td>Final Test</td>
+                <td><input type="text" id="ftest" placeholder="Nhập điểm vào đây"></td>
+            </tr>
+        </table>
+        <button onclick="solve5()">Xếp loại</button>
+        <strong id="ans5"></strong>
+    </li>
+    <li>
+        <h4>Tính tiền hoa hồng trên doanh số bán hàng</h4>
+        <input type="text" id="amount" placeholder="Nhập doanh số bán hàng">
+        <button onclick="solve6()">Kiểm tra</button><br>
+        <strong id="ans6"></strong>
+    </li>
+    <li>
+        <h4>Tính tiền cước điện thoại</h4>
+        Thời gian gọi (phút): <input type="text" id="time" placeholder="Nhập thời gian gọi vào đây">
+        <button onclick="solve7()">Tính tiền</button>
+        <br>
+        <strong id="ans7"></strong>
+    </li>
+</ol>
+<script src="practice_1.js"></script>
+</body>
+</html>
