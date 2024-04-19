@@ -1,0 +1,29 @@
+table {
+    width: 250px;
+    height: 300px;
+}
+td {
+    width: 25%;
+    height: 20%;
+    text-align: center;
+}
+button {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    font-size: x-large;
+    border-color: #dddddd;
+    font-family: "JetBrains Mono ExtraBold", serif;
+}
+input {
+    width: 97%;
+    height: 90%;
+    border-radius: 10px;
+    border-color: #dddddd;
+    font-size: x-large;
+    font-family: "JetBrains Mono ExtraBold", serif;
+}
+input[type="text"]::placeholder {
+    text-align: center;
+    color: chartreuse;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table border="3" style="border-color: blue">
+    <tr>
+        <td colspan="4">
+            <input type="text" id="screen" placeholder="CASIO">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="setValue(1)">1</button>
+        </td>
+        <td>
+            <button onclick="setValue(2)">2</button>
+        </td>
+        <td>
+            <button onclick="setValue(3)">3</button>
+        </td>
+        <td>
+            <button onclick="setValue('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="setValue(4)">4</button>
+        </td>
+        <td>
+            <button onclick="setValue(5)">5</button>
+        </td>
+        <td>
+            <button onclick="setValue(6)">6</button>
+        </td>
+        <td>
+            <button onclick="setValue('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="setValue(7)">7</button>
+        </td>
+        <td>
+            <button onclick="setValue(8)">8</button>
+        </td>
+        <td>
+            <button onclick="setValue(9)">9</button>
+        </td>
+        <td>
+            <button onclick="setValue('*')">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="clearScreen()">C</button>
+        </td>
+        <td>
+            <button onclick="setValue(0)">0</button>
+        </td>
+        <td>
+            <button onclick="result()">=</button>
+        </td>
+        <td>
+            <button onclick="setValue('/')">/</button>
+        </td>
+    </tr>
+</table>
+    <script src="Calculator.js"></script>
+</body>
+</html>
