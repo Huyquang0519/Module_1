@@ -1,13 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Practice 1</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trò chơi đoán số</title>
 </head>
 <body>
-    <button id="btn"><label id="content"></label></button>
-<script>
-
-</script>
+    <button onclick="startGame()">Start</button>
+    <script>
+        function startGame() {
+            let maxNum = prompt("Nhập giá trị lớn nhất của đoạn bạn muốn đoán: ");
+            let ans = parseInt(Math.random())
+        }
+    </script>
 </body>
 </html>
