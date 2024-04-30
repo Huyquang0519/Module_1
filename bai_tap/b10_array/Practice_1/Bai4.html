@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <h2>Mảng sau khi đảo ngược là:</h2>
+    <h3 id="result"></h3>
+<script>
+    let num = +prompt("Nhập vào số lượng phần tử của mảng:");
+    let numbers = [];
+    for(let i = 0; i < num; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+    }
+    // let temp;
+    // for(let i = 0; i <= num/2; i++){
+    //     temp = numbers[i];
+    //     numbers[i] = numbers[num - i - 1];
+    //     numbers[num - i - 1] = temp;
+    // }
+    numbers.reverse();
+    document.getElementById("result").innerHTML = numbers.join(" - ");
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for(let i = 0; i < 10; i ++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+    }
+    let numV = +prompt("Nhập vào số nguyên V: ");
+    let pos = numbers.indexOf(numV);
+    //Xóa V sử dụng vòng for
+    // if(pos !== -1){
+    //     for(let i = pos + 1; i < 10; i++){
+    //         numbers[i-1] = numbers[i];
+    //     }
+    //     numbers[9] = 0;
+    //     alert("Mảng sau khi xóa phần tử V là: " + numbers.toString());
+    // }
+    // else{
+    //     alert("V không có trong mảng!");
+    // }
+    //Sử dụng hàm có sẵn
+    if(pos !== -1){
+        numbers.splice(pos, 1);
+        numbers.push(0);
+        alert("Mảng sau khi xóa phần tử V là: " + numbers.toString())
+    }
+    else alert("V không có trong mảng!");
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng 2</title>
+</head>
+<body>
+<script>
+     let number = prompt("Nhập vào một số: ");
+     let result = [number[0]];
+     for(let i = 1; i < number.length; i++){
+         if(number[i - 1] % 2 === 0 && number[i] % 2 === 0) {
+             result.push('-', number[i]);
+         }
+         else result.push(number[i]);
+     }
+     alert("Kết quả là: " + result.join(''));
+</script>
+</body>
+</html>

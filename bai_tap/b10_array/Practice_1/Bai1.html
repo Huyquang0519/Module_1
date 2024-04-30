@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số phần tử của mảng: ");
+    let numbers = [];
+    let count = 0;
+    for(let i = 0; i < num; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+        if(numbers[i] >= 10) count++;
+    }
+    // for(let i = 0; i < num; i++){
+    //     let x = +prompt("Nhập vào phần tử thứ " + i + " :");
+    //     numbers.push(x);
+    //     if(x >= 10) count++;
+    // }
+    alert("Có " + count + "số nguyên lớn hơn hoặc bằng 10!");
+
+
+</script>
+</body>
+</html>

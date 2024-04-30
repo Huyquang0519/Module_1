@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số phần tử của mảng: ");
+    let numbers = [];
+    for(let i = 0; i < num; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + ": ");
+    }
+    let maxVal = numbers[0], sum = numbers[0];
+    for(let i = 1; i < num; i++){
+        sum += numbers[i];
+        if(numbers[i] > maxVal) maxVal = numbers[i];
+    }
+    document.write("Phần tử lớn nhất trong mảng là: " + maxVal + "<br>");
+    document.write("Giá trị trung bình các phần tử trong mảng là: " + sum/numbers.length);
+</script>
+</body>
+</html>

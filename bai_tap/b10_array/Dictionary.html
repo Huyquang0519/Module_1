@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oxford Dictionary</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="Translate()">Translate</button>
+    <br><br>
+    <label id="output"></label>
+<script>
+    let eDict = ["banana", "apple", "pen", "ball", "house", "horse", "chicken", "dog", "cat"];
+    let vDict = ["chuối", "táo", "bút", "bóng", "nhà", "ngựa", "gà", "chó", "mèo"];
+    let check = false, output = "";
+    function Translate() {
+        let word = document.getElementById("input").value;
+        for(let i = 0;  i <eDict.length; i++){
+            if(word === eDict[i]){
+                output = vDict[i];
+                check = true;
+            }
+            else if(vDict[i] === word){
+                output = eDict[i];
+                check = true;
+            }
+        }
+        if(check === false) document.getElementById("output").innerHTML = "<b>" + "Không tìm thấy từ!" + "</b>";
+        else document.getElementById("output").innerHTML = "<b>" + output + "</b>";
+    }
+</script>
+</body>
+</html>

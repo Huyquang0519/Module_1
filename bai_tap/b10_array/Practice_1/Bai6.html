@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for(let i = 0; i < 10; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+    }
+    let numV = +prompt("Nhập vào số nguyên V: ");
+    //Cách 1: duyệt toàn bộ mảng để tìm
+    // let isExist = false;
+    // for(let i = 0; i < numbers.length; i++){
+    //     if(numbers[i] === numV){
+    //         isExist = true; break;
+    //     }
+    // }
+    // if(isExist) alert("V is in the array");
+    // else alert("V is not in the array");
+    //Cách 2: sử dụng hàm includes nếu hàm trả về true thì V có trong mảng
+    let result = numbers.includes(numV);
+    if(result) alert("V is in the array");
+    else alert("V is not in the array");
+    //Cách 3: sử dụng hàm indexOf nếu hàm trả về giá trị khác -1 thì V có trong mảng
+</script>
+</body>
+</html>

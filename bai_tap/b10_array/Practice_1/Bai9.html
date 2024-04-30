@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let arrA = Array(10);
+    let arrB = Array(10);
+    // let arrC = Array(20);
+    for(let i = 0; i < 10; i++){
+        arrA[i] = +prompt("Nhập vào phần tử arrA[" + i + "] :");
+    }
+    for(let i = 0; i < 10; i++){
+        arrB[i] = +prompt("Nhập vào phần tử arrB[" + i + "] :");
+    }
+    // Sử dụng vòng lặp for
+    // for(let i = 0; i < 20; i++){
+    //     if(i < 10) arrC[i] = arrA[i];
+    //     else arrC[i] = arrB[i-10];
+    // }
+    // document.write(arrC.toString());
+
+    // Sử dụng hàm concat
+    let arrC = arrA.concat(arrB);
+    document.write(arrC.toString());
+</script>
+</body>
+</html>

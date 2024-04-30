@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập vào một chuỗi: ");
+    //Sử dụng vòng for
+    string.toLowerCase();
+    let count = 0;
+    for(let c = 0; c < string.length; c++){
+        if(string[c] === 'a'|| string[c] === 'e' || string[c] === 'i' || string[c] === 'o' || string[c] === 'u'){
+            count++;
+        }
+    }
+    // Sử dụng vòng for-of và hàm includes
+    // let vowel = 'aeiou', count = 0;
+    // for(let char of string.toLowerCase()){
+    //     if(vowel.includes(char)) count++;
+    // }
+    //Sử dụng biểu thức chính quy Regex
+    // g: so khớp toàn bộ chuỗi
+    // i: so khớp không quan tâm hoa thường
+    // m: so khớp cả các dữ liệu xuống dòng
+    // let count = string.match(/[aeiou]/gi).length;
+    alert("Số nguyên âm trong chuỗi vừa nhập là: " + count);
+</script>
+</body>
+</html>

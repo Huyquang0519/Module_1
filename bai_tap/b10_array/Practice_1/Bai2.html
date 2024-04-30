@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số lương phần tử của mảng: ");
+    let numbers = [];
+    for(let i = 0; i < num; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+    }
+    let maxVal = numbers[0], pos = 0;
+    // for(let i = 1; i < numbers.length; i++){
+    //     if(numbers[i] > maxVal){
+    //         maxVal = numbers[i];
+    //         pos = i;
+    //     }
+    // }
+    // alert("Phần tử lớn nhất của mảng là: a[" + pos + "] = " + maxVal);
+    for(let x of numbers){
+        if(x > maxVal) maxVal = x;
+    }
+    alert("Phần tử lớn nhất của mảng là : a[" + numbers.indexOf(maxVal) + "] = " + maxVal);
+
+
+</script>
+</body>
+</html>

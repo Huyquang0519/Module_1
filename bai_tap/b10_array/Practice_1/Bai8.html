@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for(let i = 0; i < 10; i++){
+        numbers[i] = +prompt("Nhập vào phần tử thứ " + i + " :");
+    }
+    //Sử dụng hai vòng for lồng nhau (selectionSort)
+    // for(let i = 0; i < 9; i++){
+    //     let pos = i;
+    //     for(let j = i+1; j < 10; j++){
+    //         if(numbers[pos] < numbers[j]){
+    //             pos = j;
+    //         }
+    //     }
+    //     let tmp = numbers[i];
+    //     numbers[i] = numbers[pos];
+    //     numbers[pos] = tmp;
+    // }
+    //Sử dụng hàm sort kết hợp với compareFn
+    numbers.sort(function (a, b){
+        if(a >= b) return -1;
+        else return 1;
+    });
+    alert("Mảng sắp xếp giảm dần là: " + numbers.toString());
+</script>
+</body>
+</html>

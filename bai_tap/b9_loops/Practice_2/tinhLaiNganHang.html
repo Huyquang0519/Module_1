@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Số tiền vay ban đầu</th>
+            <th>Số tháng cho vay</th>
+            <th>Lãi suất hàng tháng</th>
+        </tr>
+        <tr>
+            <th><input type="number" id="loan"></th>
+            <th><input type="number" id="time"></th>
+            <th><strong>0.67%</strong></th>
+        </tr>
+    </table>
+        <br>
+    <button onclick="tinhTienLai()">Tính tiền lãi ngân hàng</button>
+    <strong id="result"></strong>
+    <script>
+        function tinhTienLai() {
+            let loan = document.getElementById("loan").value;
+            let time = document.getElementById("time").value;
+            let result = 0;
+            for(let i = 1; i <= time; i++){
+                result += loan * 0.0067;
+                loan += result;
+            }
+            document.getElementById("result").innerHTML = "<br> Tiền lãi ngân hàng là: " + result;
+        }
+    </script>
+</body>
+</html>
