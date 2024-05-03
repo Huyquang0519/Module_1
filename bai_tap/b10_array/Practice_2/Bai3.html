@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let num = prompt("Nhập vào số phần tử của mảng: ");
+    let numbers = "0123456789";
+    let count = 0;
+    for(let i = 0; i < num; i++){
+        arr[i] = prompt("Nhập vào phần tử a[" + i + "]: ");
+        if(numbers.includes(arr[i])) count++;
+    }
+    alert("Số ký tự số trong mảng là : " + count);
+</script>
+</body>
+</html>

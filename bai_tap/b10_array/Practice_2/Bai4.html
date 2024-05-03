@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let inputText = prompt("Nhập vào một chuỗi: ");
+    // Loại bỏ khoảng trắng ở đầu và cuối chuỗi
+    inputText = inputText.replace(/(^\s*)|(\s*$)/gi, "");
+    // Chuyển 2 hoặc nhiều khoảng trắng thành 1 khoảng trắng
+    inputText = inputText.replace(/ {2,}/gi, " ");
+    // Loại bỏ ký tự xuống dòng có khoảng trắng ở đầu
+    inputText = inputText.replace(/\n /, "\n");
+    // Đếm số từ bằng cách tách chuỗi theo khoảng trắng
+    let wordCount = inputText.split(" ").length;
+    alert("Số từ trong chuỗi vừa nhập là : " + wordCount);
+</script>
+</body>
+</html>
