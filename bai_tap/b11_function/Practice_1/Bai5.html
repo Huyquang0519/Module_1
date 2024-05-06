@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    const stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    const constellations = ['Ursa Minor', 'Tarurus',' Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let input = prompt("Nhập vào tên một ngôi sao: ");
+    solve(input);
+    function solve(name) {
+        for(let i = 0; i < stars.length; i++){
+            if(name === stars[i]){
+                alert("Sao " + name + " thuộc chòm sao " + constellations[i]);
+                return;
+            }
+        }
+        alert("Không tìm thấy ngôi sao!");
+    }
+
+</script>
+</body>
+</html>

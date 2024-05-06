@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi đơn vị đo (feet và meters)</title>
+    <style>
+        table{
+            width: 300px;
+            height: 80px;
+        }
+        input{
+            width: 290px;
+            height: 35px;
+        }
+        button{
+            width: 145px;
+            height: 35px;
+            background-color: royalblue;
+            color: #dddddd;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2">
+                <label for="inp"><input type="text" id="inp"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="feetToMeters()">To Meters</button>
+            </td>
+            <td>
+                <button onclick="metersToFeet()">To Feet</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function feetToMeters() {
+            let input = +document.getElementById("inp").value;
+            let output = Math.round((input*0.305)*100)/100;
+            alert("Kết quả: " + input + " feet = " + output + " meters")
+        }
+        function metersToFeet() {
+            let input = +document.getElementById("inp").value;
+            let output = Math.round((input*3.279)*100)/100;
+            alert("Kết quả: " + input + " meters = " + output + " feet");
+        }
+    </script>
+</body>
+</html>
