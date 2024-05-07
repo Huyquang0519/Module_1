@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi đơn vị</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <select id="from">
+        <option value="feet">Feet</option>
+        <option value="meters">Meters</option>
+    </select>
+    <select id="to">
+        <option value="feet">Feet</option>
+        <option value="meters">Meters</option>
+    </select>
+    <button onclick="Transfer()">Chuyển đổi</button>
+    <h4 id="output"></h4>
+    <script>
+        function Transfer(){
+            let input = +document.getElementById("inp").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result;
+            if(from === "feet" && to === "meters"){
+                result = Math.round((0.305*input)*100)/100;
+            }
+            else{
+                result = Math.round((3.279*input)*100)/100;
+            }
+            document.getElementById("output").innerHTML = "Kết quả: " + input + "&nbsp" + from + " = " + result + "&nbsp" + to;
+        }
+    </script>
+</body>
+</html>
