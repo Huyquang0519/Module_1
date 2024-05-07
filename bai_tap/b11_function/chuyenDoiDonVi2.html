@@ -25,8 +25,11 @@
             if(from === "feet" && to === "meters"){
                 result = Math.round((0.305*input)*100)/100;
             }
-            else{
+            else if(from === "meters" && to === "feet"){
                 result = Math.round((3.279*input)*100)/100;
+            }
+            else{
+                result = input;
             }
             document.getElementById("output").innerHTML = "Kết quả: " + input + "&nbsp" + from + " = " + result + "&nbsp" + to;
         }
