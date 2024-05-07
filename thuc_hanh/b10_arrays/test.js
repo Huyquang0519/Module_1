@@ -15,3 +15,5 @@
 // console.log(x)
 
 
+//hàm split cắt chuỗi thành mảng
+
