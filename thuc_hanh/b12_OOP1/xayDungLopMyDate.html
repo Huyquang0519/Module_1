@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Date</title>
+</head>
+<body>
+<script>
+    let MyDate = function(day, month, year){
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //Getter
+        this.getDay = function() {
+            return this.day;
+        }
+        this.getMonth = function() {
+            return this.month;
+        }
+        this.getYear = function() {
+            return this.year;
+        }
+        //Setter
+        this.setDay = function(day) {
+            this.day = day;
+        }
+        this.setMonth = function(month) {
+            this.month = month
+        }
+        this.setYear = function(year) {
+            this.year = year;
+        }
+        //setDate
+        this.setDate = function(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        //toString();
+        this.dateToString = function() {
+            let output = '';
+            if(this.day < 10) output += '0' + this.day + '/';
+            else output += this.day + '/'
+            if(this.month < 10) output += '0' + this.month + '/';
+            else output += this.month + '/';
+            output += this.year.toString();
+            return output;
+        }
+    };
+
+    let date1 = new MyDate(0,0,0);
+    date1.setDay(12);
+    date1.setMonth(11);
+    date1.setYear(2023);
+
+    let date2 = new MyDate(0,0,0);
+    date2.setDate(12,11,2022);
+    let output = date2.getDay() + '/' + date2.getMonth() + '/' + date2.getYear();
+    document.write(output);
+
+    let date3 = new MyDate(2,2,2001);
+    document.write(date3.dateToString());
+
+</script>
+</body>
+</html>
