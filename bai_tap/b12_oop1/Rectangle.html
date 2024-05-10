@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        getArea() {
+            return Math.round(this.height * this.width * 100)/100;
+        }
+        getPerimeter() {
+            return Math.round(200 * (this.height + this.width))/100;
+        }
+    }
+
+    let rect = new Rectangle(20, 10);
+    document.write(rect.getArea() + '<br>');
+    document.write(rect.getPerimeter());
+</script>
+</body>
+</html>

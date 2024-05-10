@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình tròn</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        getRadius() {
+            return this.radius;
+        }
+        getArea() {
+            return Math.round((Math.PI * this.radius * this.radius)*100)/100;
+        }
+    }
+
+    let circle = new Circle(10, "red");
+    let banKinh = circle.getRadius();
+    let dienTich = circle.getArea();
+    alert("Bán kính của hình tròn là: " + banKinh);
+    alert("Diện tích của hình tròn là: " + dienTich);
+
+</script>
+</body>
+</html>

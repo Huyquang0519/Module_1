@@ -6,47 +6,49 @@
 </head>
 <body>
 <script>
-    let MyDate = function(day, month, year){
-        this.day = day;
-        this.month = month;
-        this.year = year;
-        //Getter
-        this.getDay = function() {
-            return this.day;
-        }
-        this.getMonth = function() {
-            return this.month;
-        }
-        this.getYear = function() {
-            return this.year;
-        }
-        //Setter
-        this.setDay = function(day) {
-            this.day = day;
-        }
-        this.setMonth = function(month) {
-            this.month = month
-        }
-        this.setYear = function(year) {
-            this.year = year;
-        }
-        //setDate
-        this.setDate = function(day, month, year) {
+    class MyDate {
+        constructor(day, month, year) {
             this.day = day;
             this.month = month;
             this.year = year;
         }
-        //toString();
-        this.dateToString = function() {
-            let output = '';
-            if(this.day < 10) output += '0' + this.day + '/';
-            else output += this.day + '/'
-            if(this.month < 10) output += '0' + this.month + '/';
-            else output += this.month + '/';
-            output += this.year.toString();
-            return output;
+        //Getter
+        getDay() {
+            return this.day;
         }
-    };
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        //Setter
+        setDay(day) {
+            this.day = day;
+        }
+        setMonth(month) {
+            this.month = month;
+        }
+        setYear(year) {
+            this.year = year;
+        }
+        setDate(day, month, year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        toString() {
+            let str = '';
+            if(this.day < 10) str += ('0' + this.day + '/');
+            else str += (this.day + '/');
+            if(this.month < 10) str += ('0' + this.month + '/');
+            else str += (this.month + '/');
+            str += this.year;
+            return str;
+        }
+    }
+
 
     let date1 = new MyDate(0,0,0);
     date1.setDay(12);
@@ -59,7 +61,7 @@
     document.write(output);
 
     let date3 = new MyDate(2,2,2001);
-    document.write(date3.dateToString());
+    document.write(date3.toString());
 
 </script>
 </body>
