@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đèn pin</title>
+</head>
+<body>
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+        getEnergy() {
+            return this.energy;
+        }
+        decreaseEnergy() {
+            if(this.energy > 0)
+                this.energy--;
+        }
+    }
+
+    class FlashLamp {
+        constructor(){
+            this.status = false;
+            this.battery = new Battery();
+        }
+    }
+</script>
+</body>
+</html>
