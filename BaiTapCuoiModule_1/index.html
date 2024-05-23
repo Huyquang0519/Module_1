@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5d225004ca.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin-top: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        td, th {
+            text-align: center;
+        }
+        input {
+            width: 300px
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="product_img/header-logo.png" alt="header_logo" height="50px" width="100px"/>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">&nbsp&nbspHome</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Catagories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Home Improvement</a></li>
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Computers</a></li>
+                            <li><a class="dropdown-item" href="#">Smart Home</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">All Products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex mx-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px">
+                    <button class="btn btn-outline-info" type="button" onclick="searchProduct()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+<table class="table table-hover table-bordered"  style="width: 60%; float:right; background-color: aliceblue" >
+    <thead>
+    <tr>
+        <th colspan="8" style="text-align: center">PRODUCTS LIST</th>
+    </tr>
+    <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th colspan="2">Options</th>
+    </tr>
+    </thead>
+    <tbody id="product-list"></tbody>
+</table>
+<table class="table table-bordered" style="float: left; width: 35%; background-color: #5f6062">
+    <tr>
+        <th colspan="2">PRODUCT INFORMATION</th>
+    </tr>
+    <tr>
+        <th>
+            <label for="product-name">Name</label>
+        </th>
+        <td>
+            <input type="text" id="product-name" required>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="product-group">Category</label>
+        </th>
+        <td>
+            <input type="text" id="product-group" required>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="product-price">Price</label>
+        </th>
+        <td>
+            <input type="number" id="product-price" required>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="product-quantity">Quantity</label>
+        </th>
+        <td>
+            <input type="number" id="product-quantity" required>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="product-img">Image</label>
+        </th>
+        <td>
+            <input type="text" id="product-img" required>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button type="button" class="btn btn-primary " id="add-product" onclick="addProduct()">
+                <i class="fa-solid fa-folder-plus"></i>&nbsp&nbspAdd</button>
+            <button type="button" class="btn btn-success" id="update-product" onclick="updateProduct()">
+                <i class="fa-solid fa-wrench"></i>&nbspUpdate</button>
+        </td>
+    </tr>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="Product.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
