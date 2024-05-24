@@ -8,38 +8,50 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5d225004ca.js" crossorigin="anonymous"></script>
     <style>
-        *{
-            font-family: Arial, sans-serif;
+        * {
+            font-family: "Verdana", sans-serif;
             margin: 0;
             padding: 0;
         }
+
         table {
             width: 80%;
             border-collapse: collapse;
         }
-        #main-tb td, #main-tb th {
-            border: none;
+
+        #main-tb {
+            background-color: #f8f9fa;
         }
+
+        #sub-tb {
+            background-color: #e9ecef;
+        }
+
         #main-tb th {
             border-bottom: 1px solid black;
         }
+
         td, th {
             text-align: center;
         }
+
         input {
-            width: 600px;
-            height: 60%;
+            width: 500px;
+            height: 80%;
         }
+
         body {
             background-color: darkgray;
         }
+
     </style>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-secondary" style="background-color: dimgray !important;">
         <div class="container-fluid">
             <img src="product_img/header-logo.png" alt="header_logo" height="50px" width="100px"/>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,7 +78,8 @@
                     </li>
                 </ul>
                 <div class="d-flex " role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                           style="width: 400px">
                     <button class="btn btn-outline-light" type="button" onclick="searchProduct()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -86,7 +99,7 @@
     </nav>
 </header>
 <body>
-<table class="table table-hover table-borderless" id="main-tb" style="background-color: gray">
+<table class="table table-hover table-borderless table-info" id="main-tb">
     <thead>
     <tr>
         <th colspan="8" style="text-align: center">PRODUCTS LIST</th>
@@ -103,7 +116,7 @@
     </thead>
     <tbody id="product-list"></tbody>
 </table>
-<table class="table table-bordered" id="sub-tb">
+<table class="table table-bordered table-info" id="sub-tb">
     <tr>
         <th colspan="2">PRODUCT INFORMATION</th>
     </tr>
@@ -150,9 +163,11 @@
     <tr>
         <td colspan="2">
             <button type="button" class="btn btn-primary " id="add-product" onclick="addProduct()">
-                <i class="fa-solid fa-folder-plus"></i>&nbsp&nbspAdd</button>
+                <i class="fa-solid fa-folder-plus"></i>&nbspAdd
+            </button>
             <button type="button" class="btn btn-success" id="update-product" onclick="updateProduct()">
-                <i class="fa-solid fa-wrench"></i>&nbspUpdate</button>
+                <i class="fa-solid fa-wrench"></i>&nbspUpdate
+            </button>
         </td>
     </tr>
 </table>
