@@ -50,6 +50,7 @@ function editProduct(index){
         document.getElementById("product-quantity").value = products[index].getQuantity();
         document.getElementById("product-img").value = products[index].getImg();
         edit_index = index;
+        document.getElementById("sub-tb").scrollIntoView({behavior: "smooth"});
     }
     else {
         alert("Thao tác không được thực hiện!");

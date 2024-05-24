@@ -10,27 +10,33 @@
     <style>
         *{
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-
         table {
-            margin-top: 30px;
-            margin-left: 10px;
-            margin-right: 10px;
+            width: 80%;
+            border-collapse: collapse;
         }
-
+        #main-tb td, #main-tb th {
+            border: none;
+        }
+        #main-tb th {
+            border-bottom: 1px solid black;
+        }
         td, th {
             text-align: center;
         }
         input {
-            width: 300px
+            width: 600px;
+            height: 60%;
         }
         body {
-            background-color: antiquewhite;
+            background-color: darkgray;
         }
     </style>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-secondary" style="background-color: dimgray !important;">
         <div class="container-fluid">
             <img src="product_img/header-logo.png" alt="header_logo" height="50px" width="100px"/>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -40,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">&nbsp&nbspHome</a>
+                        <a class="nav-link active" aria-current="page" href="#">&nbsp&nbspHome&nbsp&nbsp</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -59,18 +65,28 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="d-flex mx-auto" role="search">
+                <div class="d-flex " role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px">
-                    <button class="btn btn-outline-info" type="button" onclick="searchProduct()">
+                    <button class="btn btn-outline-light" type="button" onclick="searchProduct()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
+                </div>
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <div class="d-flex ">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-user fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </nav>
 </header>
 <body>
-<table class="table table-hover table-bordered"  style="width: 60%; float:right; background-color: aliceblue" >
+<table class="table table-hover table-borderless" id="main-tb" style="background-color: gray">
     <thead>
     <tr>
         <th colspan="8" style="text-align: center">PRODUCTS LIST</th>
@@ -87,7 +103,7 @@
     </thead>
     <tbody id="product-list"></tbody>
 </table>
-<table class="table table-bordered" style="float: left; width: 35%; background-color: #5f6062">
+<table class="table table-bordered" id="sub-tb">
     <tr>
         <th colspan="2">PRODUCT INFORMATION</th>
     </tr>
