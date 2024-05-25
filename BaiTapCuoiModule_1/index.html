@@ -17,14 +17,11 @@
         table {
             width: 80%;
             border-collapse: collapse;
-        }
 
-        #main-tb {
-            background-color: #f8f9fa;
         }
 
         #sub-tb {
-            background-color: #e9ecef;
+            border: 1px solid black;
         }
 
         #main-tb th {
@@ -48,7 +45,7 @@
     </style>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-secondary" style="background-color: lightblue !important;">
+    <nav class="navbar navbar-expand-lg" style="background-color: darkcyan !important;">
         <div class="container-fluid">
             <img src="product_img/header-logo.png" alt="header_logo" height="50px" width="100px"/>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -81,7 +78,7 @@
                 <div class="d-flex " role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                            style="width: 400px">
-                    <button class="btn btn-outline-primary" type="button" onclick="searchProduct()">
+                    <button class="btn btn-warning" type="button" onclick="searchProduct()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -100,7 +97,7 @@
     </nav>
 </header>
 <body>
-<table class="table table-hover table-borderless table-secondary" id="main-tb">
+<table class="table table-hover table-borderless table-info" id="main-tb">
     <thead>
     <tr>
         <th colspan="8" style="text-align: center">PRODUCTS LIST</th>
@@ -117,7 +114,7 @@
     </thead>
     <tbody id="product-list"></tbody>
 </table>
-<table class="table table-bordered table-secondary" id="sub-tb">
+<table class="table table-bordered table-info" id="sub-tb">
     <tr>
         <th colspan="2">PRODUCT INFORMATION</th>
     </tr>

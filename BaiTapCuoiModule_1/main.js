@@ -34,9 +34,16 @@ function addProduct() {
     let price = document.getElementById("product-price").value;
     let quantity = document.getElementById("product-quantity").value;
     let img = document.getElementById("product-img").value;
+    for (let product of products) {
+        if (product.getName() === name && product.getGroup() === group && product.getPrice() === price && product.getQuantity() === quantity && product.getImg() === img) {
+            alert("Đã tồn tại sản phẩm tương tự!");
+            return;
+        }
+    }
     let product = new Product(name, img, price, quantity, group);
     products.push(product);
-    display();
+    alert("Thêm sản phẩm thành công!")
+    display(products);
     clear();
 }
 
@@ -60,13 +67,18 @@ function updateProduct(){
     if(!validateForm()){
         return;
     }
-    alert("Cập nhật thông tin sản phẩm thành công!");
     let name = document.getElementById("product-name").value;
     let group = document.getElementById("product-group").value;
     let price = document.getElementById("product-price").value;
     let quantity = document.getElementById("product-quantity").value;
     let img = document.getElementById("product-img").value;
+    let old_product = products[edit_index];
+    if (old_product.getName() === name && old_product.getGroup() === group && old_product.getPrice() === price && old_product.getQuantity() === quantity && old_product.getImg() === img) {
+        alert("Không có sự thay đổi nào!");
+        return;
+    }
     products[edit_index].edit(name, img, price, quantity, group);
+    alert("Cập nhật thông tin sản phẩm thành công!");
     display(products);
     clear();
     edit_index = -1; // reset edit_index
@@ -95,11 +107,26 @@ function validateForm() {
     let quantity = document.getElementById("product-quantity").value;
     let img = document.getElementById("product-img").value;
 
-    if (!name || !group || !price || !quantity || !img) {
-        alert("All fields must be filled out");
+    if(!name){
+        alert("Vui lòng nhập tên sản phẩm!");
         return false;
     }
-
+    if(!group){
+        alert("Vui lòng chọn nhóm sản phẩm!");
+        return false;
+    }
+    if(!price){
+        alert("Vui lòng nhập giá sản phẩm!");
+        return false;
+    }
+    if(!quantity){
+        alert("Vui lòng nhập số lượng sản phẩm!");
+        return false;
+    }
+    if(!img){
+        alert("Vui lòng nhập đường dẫn ảnh sản phẩm!");
+        return false;
+    }
     return true;
 }
 function searchProduct() {
