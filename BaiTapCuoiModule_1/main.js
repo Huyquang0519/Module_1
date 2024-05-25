@@ -1,8 +1,8 @@
-let product_1 = new Product("Refrigerator","product_img/product_4.png", 8700000, 100, "g1");
-let product_2 = new Product("Air conditioner", "product_img/product_1.png", 10000000, 50, "g2");
-let product_3 = new Product("Microwave", "product_img/product_3.png", 0, 1, "g3");
-let product_4 = new Product("Blender", "product_img/product_5.png", 0, 1, "g1");
-let product_5 = new Product("Washing machine", "product_img/product_2.png", 0, 1, "g2");
+let product_1 = new Product("Refrigerator","product_img/product_4.png", 8700, 100, "Kitchen Appliances");
+let product_2 = new Product("Air conditioner", "product_img/product_1.png", 6200, 50, "Room Appliances");
+let product_3 = new Product("Microwave", "product_img/product_3.png", 500, 5600, "Kitchen Appliances");
+let product_4 = new Product("Blender", "product_img/product_5.png", 20, 800, "Kitchen Appliances");
+let product_5 = new Product("Washing machine", "product_img/product_2.png", 10, 4000, "Laundry Appliances");
 
 let products = [product_1, product_2, product_3, product_4, product_5];
 display(products);
@@ -67,7 +67,7 @@ function updateProduct(){
     let quantity = document.getElementById("product-quantity").value;
     let img = document.getElementById("product-img").value;
     products[edit_index].edit(name, img, price, quantity, group);
-    display();
+    display(products);
     clear();
     edit_index = -1; // reset edit_index
 }
@@ -75,7 +75,7 @@ function deleteProduct(index){
     let check = confirm("Bạn muốn xóa sản phẩm " + products[index].getName()+"?");
     if(check){
         products.splice(index, 1);
-        display();
+        display(products);
     }
     else{
         alert("Thao tác không được thực hiện!");

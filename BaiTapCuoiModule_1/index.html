@@ -33,11 +33,12 @@
 
         td, th {
             text-align: center;
+            vertical-align: middle;
         }
 
         input {
             width: 500px;
-            height: 80%;
+            height: 90%;
         }
 
         body {
@@ -47,7 +48,7 @@
     </style>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-secondary" style="background-color: dimgray !important;">
+    <nav class="navbar navbar-expand-lg bg-body-secondary" style="background-color: lightblue !important;">
         <div class="container-fluid">
             <img src="product_img/header-logo.png" alt="header_logo" height="50px" width="100px"/>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -80,7 +81,7 @@
                 <div class="d-flex " role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                            style="width: 400px">
-                    <button class="btn btn-outline-light" type="button" onclick="searchProduct()">
+                    <button class="btn btn-outline-primary" type="button" onclick="searchProduct()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -99,7 +100,7 @@
     </nav>
 </header>
 <body>
-<table class="table table-hover table-borderless table-info" id="main-tb">
+<table class="table table-hover table-borderless table-secondary" id="main-tb">
     <thead>
     <tr>
         <th colspan="8" style="text-align: center">PRODUCTS LIST</th>
@@ -116,7 +117,7 @@
     </thead>
     <tbody id="product-list"></tbody>
 </table>
-<table class="table table-bordered table-info" id="sub-tb">
+<table class="table table-bordered table-secondary" id="sub-tb">
     <tr>
         <th colspan="2">PRODUCT INFORMATION</th>
     </tr>
@@ -125,7 +126,7 @@
             <label for="product-name">Name</label>
         </th>
         <td>
-            <input type="text" id="product-name" required>
+            <input type="text" id="product-name">
         </td>
     </tr>
     <tr>
@@ -133,7 +134,7 @@
             <label for="product-group">Category</label>
         </th>
         <td>
-            <input type="text" id="product-group" required>
+            <input type="text" id="product-group">
         </td>
     </tr>
     <tr>
@@ -141,7 +142,7 @@
             <label for="product-price">Price</label>
         </th>
         <td>
-            <input type="number" id="product-price" required>
+            <input type="number" id="product-price">
         </td>
     </tr>
     <tr>
@@ -149,7 +150,7 @@
             <label for="product-quantity">Quantity</label>
         </th>
         <td>
-            <input type="number" id="product-quantity" required>
+            <input type="number" id="product-quantity">
         </td>
     </tr>
     <tr>
@@ -157,24 +158,24 @@
             <label for="product-img">Image</label>
         </th>
         <td>
-            <input type="text" id="product-img" required>
+            <input type="text" id="product-img">
         </td>
     </tr>
     <tr>
         <td colspan="2">
-            <button type="button" class="btn btn-primary " id="add-product" onclick="addProduct()">
+            <button type="button" class="btn btn-primary " onclick="addProduct()">
                 <i class="fa-solid fa-folder-plus"></i>&nbspAdd
             </button>
-            <button type="button" class="btn btn-success" id="update-product" onclick="updateProduct()">
+            <button type="button" class="btn btn-success" onclick="updateProduct()">
                 <i class="fa-solid fa-wrench"></i>&nbspUpdate
             </button>
         </td>
     </tr>
 </table>
+<script src="Product.js"></script>
+<script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script src="Product.js"></script>
-<script src="main.js"></script>
 </body>
 </html>
