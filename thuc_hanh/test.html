@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<!--
+    <div> : là thẻ block, nó sẽ chiếm toàn bộ chiều rộng của trình duyệt, thường dùng làm header, footer, sidebar, content
+    <span> : là thẻ inline, nó chỉ chiếm chiều rộng của nội dung bên trong, thường dùng để định dạng chữ, màu chữ, kích thước chữ
+    Các thẻ dùng với đoạn văn bản: <p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <a>, <strong>, <em>, <u>, <i>, <b>, <s>, <sub>, <sup>, <br>, <hr>
+    thẻ em: in nghiêng
+    thẻ sub: in dưới
+    thẻ sup: in trên
+    url là đường dẫn đến trang web, file, hình ảnh, video, âm thanh.
+    Url tương đối là đường dẫn từ file hiện tại đến file khác.
+    Url tuyệt đối là đường dẫn từ máy chủ đến file khác.
+    Siêu liên kết (hyperlink) là một đường dẫn từ một trang web hoặc một tài liệu đến một trang web hoặc tài liệu khác.
+    Muốn liên kết đến một phần trên cùng trang web ta làm như sau: <a href="#id">...</a> và thêm id="id" vào thẻ cần liên kết.
+    Muốn liên kết đến một phần trên trang khác ta làm như sau: <a href="url#id">...</a>
+    Các kiểu hiển thị danh sách: <ul>, <ol>, <li>
+    Thuộc tính hiển thị danh sách: type="1", type="A", type="a", type="I", type="i"
+    Thuộc tính start: bắt đầu từ số nào
+    Thuộc tính action: là đường dẫn mà form sẽ gửi dữ liệu đến
+    Thuộc tính method: là phương thức gửi dữ liệu, có 2 phương thức là GET và POST
+    Get: dữ liệu được gửi đi dưới dạng query string, dữ liệu được gửi đi qua url, có giới hạn và không bảo mật
+    Post: dữ liệu được gửi đi dưới dạng body, dữ liệu được gửi đi không qua url, không giới hạn và bảo mật
+    button type="submit": nút gửi dữ liệu
+    button type="reset": nút xóa dữ liệu
+    button type="button": phải gắn hàm vào onclick để thực hiện hành động
+    cellpadding: khoảng cách giữa nội dung và viền trong bảng
+    cellspacing: khoảng cách giữa các ô trong bảng
+    Các cách nhúng JavaScript vào HTML: inline, internal, external
+        -inline: viết trực tiếp vào thẻ HTML,
+        VD: <button onclick="alert('Hello')">Click me</button>
+        -internal: viết vào thẻ <script> trong thẻ <head> hoặc <body>
+        VD: <script> alert('Hello') </script>
+        -external: viết vào file js rồi gọi file js đó vào file HTML
+        VD: <script src="script.js"></script>
+     JS là ngôn ngữ lập trình client-side, là ngôn ngữ script, không cần biên dịch, chạy trên trình duyệt
+     JS phân biệt chữ hoa chữ thường
+     Quy tắc CamelCase: viết hoa chữ cái đầu của từng từ, dùng để đặt tên lớp, giao diện, các kiểu dữ liệu tự định nghĩa
+     Quy tắc camelCase: viết thường chữ cái đầu từ thứ 2 trở đi, dùng để đặt tên biến, hàm, phương thức
+     Phân biệt biến toàn cục và biến cục bộ:
+        -Biến toàn cục: được khai báo ngoài hàm, có thể truy cập ở mọi nơi trong file JS
+        -Biến cục bộ: được khai báo trong hàm, chỉ có thể truy cập trong hàm đó
+      Phân biệt các cách khai báo biến:
+        -var: khai báo biến toàn cục hoặc cục bộ, có thể khai báo lại, có thể gán lại giá trị
+         , var có thể bị hoisting
+        -let: khai báo biến cục bộ (block), không thể khai báo lại, có thể gán lại giá trị
+        -const: khai báo biến cục bộ (block), không thể khai báo lại, không thể gán lại giá trị
+
+     JS là ngôn ngữ định kiểu động (có thể thay đổi kiểu trong quá trình chạy chương trình), kiểu yếu(biến có thể chứa
+     bất kì kiểu dữ liệu nào), không cần khai báo kiểu dữ liệu khi khai báo biến
+
+     Các kiểu dữ liệu nguyên thủy trong JS: number, string, boolean, null, undefined, symbol
+     Các kiểu dữ liệu phức tạp trong JS: object, array, function
+     Toán tử typeof: trả về kiểu dữ liệu của biến
+     Các cách đưa thông báo trong JS:
+     alert() : thông báo cảnh báo,
+     console.log() : in ra console,
+     document.write() : in ra trang web,
+     confirm(): thông báo có hoặc không,
+     prompt(): thông báo nhập dữ liệu,
+
+     Các toán tử trong JS:
+        Toán tử số học: +, -, *, /, %, ++, --
+        Toán tử gán: =, +=, -=, *=, /=, %=
+        Toán tử so sánh: ==, ===, !=, !==, >, <, >=, <=
+        Toán tử logic: &&, ||, !
+        Toán tử ba ngôi: ? :
+        Toán tử chuỗi: +
+        Toán tử typeof: typeof dùng để trả về kiểu dữ liệu của biến
+        Toán tử in: in dùng để kiểm tra xem một thuộc tính có tồn tại trong một đối tượng hay không
+        Toán tử new: new dùng để tạo một thể hiện của một đối tượng
+        Toán tử instanceof: instanceof dùng để kiểm tra xem một đối tượng có phải là một thể hiện của một lớp hay không
+        Toán tử ++ và --: dùng để tăng hoặc giảm giá trị của biến một đơn vị
+        Toán tử delete: dùng để xóa một thuộc tính của một đối tượng
+
+        Sự kiện trong JS: là hành động của người dùng hoặc trình duyệt
+        Trình quản lý sự kiện: là một hàm được gọi khi sự kiện xảy ra
+        Các sự kiện chuột:
+            onclick: khi click chuột
+            ondblclick: khi double click chuột
+            onmousedown: khi nhấn chuột
+            onmouseup: khi thả chuột
+            onmouseover: khi di chuyển chuột vào phần tử
+            onmouseout: khi di chuyển chuột ra khỏi phần tử
+            onmousemove: khi di chuyển chuột
+            oncontextmenu: khi click chuột phải
+        Các sự kiện bàn phím:
+            onkeydown: khi nhấn phím
+            onkeyup: khi thả phím
+            onkeypress: khi nhấn và thả phím
+        Các sự kiện form:
+            onsubmit: khi submit form
+            onreset: khi reset form
+            onchange: khi thay đổi giá trị của input
+            onfocus: khi focus vào input
+            onblur: khi blur ra khỏi input
+            onselect: khi chọn input
+         Các sự kiện khác:
+            onload: khi tải xong trang
+            unload: khi thoát khỏi trang
+            onresize: khi thay đổi kích thước trình duyệt
+            onscroll: khi cuộn trang
+            onerror: khi xảy ra lỗi
+            oncopy: khi copy
+            oncut: khi cắt
+            onpaste: khi dán
+
+       innerHTML: là thuộc tính của thẻ HTML, dùng để lấy hoặc gán giá trị của thẻ HTML
+       innerText: là thuộc tính của thẻ HTML, dùng để lấy hoặc gán giá trị của thẻ HTML, không lấy giá trị của thẻ con
+
+       thuộc tính disabled: dùng để vô hiệu hóa một thẻ
+       thuộc tính readonly: thẻ sẽ chỉ hiển thị giá trị và không thể thay đổi bởi người dùng
+
+
+-->
+<body>
+
+<!--<input type="checkbox" id="myCheckbox" onchange="toggleButton()">-->
+<!--<button id="myButton">Click me</button>-->
+
+<!--<ol type="A" start="3">-->
+<!--    <li>hahaha</li>-->
+<!--    <li>hahaha</li>-->
+<!--    <li>hahaha</li>-->
+<!--</ol>-->
+
+
+<script>
+    // function toggleButton() {
+    //     let checkbox = document.getElementById('myCheckbox');
+    //     let button = document.getElementById('myButton');
+    //
+    //     if (checkbox.checked) {
+    //         button.disabled = true;
+    //     } else {
+    //         button.disabled = false;
+    //     }
+    // }
+    //Vòng for thiếu trong js, không cần khối lệnh khởi tạo và khối lệnh tăng giảm
+    for(; i<=5 ;){
+        console.log(i);
+        i++;
+    }
+</script>
+
+</body>
+</html>
