@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    function gcd(a, b){
+        while(b){
+            let tmp = a%b;
+            a = b;
+            b = tmp;
+        }
+        return a;
+    }
+    function isEqual (tu1, mau1, tu2, mau2){
+        let uc1 = gcd(tu1, mau1);
+        tu1 /= uc1; mau1 /= uc1;
+        let uc2 = gcd(tu2, mau2);
+        tu2 /= uc2; mau2 /= uc2;
+        return tu1 === tu2 && mau1 === mau2;
+    }
+
+    let tu1 = +prompt("Nhập tử số thứ nhất: ");
+    let mau1 = +prompt("Nhập mẫu số thứ nhất: ");
+    let tu2 = +prompt("Nhập tử số thứ hai: ");
+    let mau2 = +prompt("Nhập mẫu số thứ hai: ");
+    document.write(isEqual(tu1, mau1, tu2, mau2));
+</script>
+</body>
+</html>
